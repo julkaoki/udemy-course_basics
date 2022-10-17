@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 
+        Sprawdzenie temperatury w stopniach z użyciem zmiennej
+        - temp. < 0 "bierzemy kurtkę"
+        - temp. == 0 "bierzemy lekką kurtkę"
+        - temp. >= 20 "bierzemy krótki rękaw"
+        - temp. > 20 "zostajemy w domu"
+        */
+
+        let temperature = -4;
+
+        if (temperature < 0) {
+            console.log("Jest", temperature, "st.C na dworze. Lepiej weź ciepłą kurtkę.");
+        } else if (temperature == 0) {
+            console.log("Jest", temperature, "st.C na dworze. Lepiej weź lekką kurtkę.");
+        } else if (temperature >= 20) { 
+            console.log("Jest", temperature, "st.C na dworze. Możesz ubrać krótki rękaw.");
+        } else {
+            console.log("Jest", temperature, "st.C na dworze. Lepiej zostań w domu.");
+        }
+
+    </script>
+</body>
+</html>
