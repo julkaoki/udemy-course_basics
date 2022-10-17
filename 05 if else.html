@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        if (10 > 5) { //true
+            console.log("#1 wykona się");
+        }
+
+        if (7 <= 7) { //true
+            console.log("#2 wykona się");
+        }
+
+        if (8 <= 7) { //false
+            console.log("#3 wykona się");
+        }
+
+        let data1 = 9;
+        if (data1 > 5) { //true
+            console.log("#4 wykona się");
+        }
+
+        if (data1 < 5) { //false
+            console.log("#5 wykona się");
+        } else {
+            console.log("#6 wykona się")
+        }
+
+        let info = 23;
+
+        if (info < 0) {
+            console.log("#7 info mniejsze od 0");
+        } else if (info == 0) {
+            console.log("#8 info równe jest 0");
+        } else if (info == 2) {
+            console.log("#9 info równe jest 2");
+        } else {
+            console.log("#10 ostatni else dla info:", info);
+        }
+
+        if (10 != 8) {
+            console.log("#11 true, bo 10 nie jest równe 8");
+        }
+
+        if (true) {
+            console.log("#12 true, wykona się");
+        }
+
+        //co faktycznie jest sprawdzane?
+
+        if (true == true) {
+            console.log("#13 true równe siet true, wykona się");
+        }
+
+        if (5) {console.log("#14 wartość 5");} //5 daje true, kod się wykona
+        
+        if (0) {console.log("#15 wartość 0");} //0 daje false, kod się nie wykona
+
+        if (-10) console.log("#16 wykona się, bo -10 nie jest 0"); //skrócony zapis
+
+    </script>
+</body>
+</html>
