@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function multiply(a, b, c) {
+            let result = a * b * c;
+            return result;
+        }
+
+        let multiplyResult = multiply(2, 3, 10);
+        console.log(multiplyResult);
+
+        let multiplyResult2 = multiply(4, 2, 12);
+        console.log(multiplyResult2);
+
+//
+
+        function substract(s1, s2) {
+            return s1 - s2;
+        }
+
+        let substractResult = substract(10, 4);
+        console.log(substractResult);
+
+        let substractResult2 = substract(23, 30);
+        console.log(substractResult2);
+
+//
+
+        function getSomeNumber () {
+            return 79;
+        }
+        console.log(getSomeNumber);
+
+//
+
+        let money = 1000;
+        let interstRate = 0.05;
+
+        function calculateInvestmentResult(money, interestRate) {
+            return money + (money * interestRate);
+        }
+
+        let investmentResult = calculateInvestmentResult(money, interstRate);
+        console.log(investmentResult);
+
+        console.log(calculateInvestmentResult(2200, 0.075));
+
+    </script>
+</body>
+</html>
