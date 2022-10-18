@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function test(str, obj) {
+    str = "Julia";
+    obj.data = 99;
+}
+
+var someText = "Ania";
+var someObj = {data: 10};
+
+test(someText, someObj);
+console.log ("someText:", someText);
+console.log ("someObj:", someObj.data);
+
+//
+
+function foo(data, info, str, num1, obj1, addr1, addr2) { }
+foo(10, "sth", 99, {}, "00-000 Warszawa", "00-000 Łódź");
+
+function bar(params) {
+    if(params.hasOwnProperty("data")) console.log(params.data);
+    var info = params.hasOwnProperty("info") ? params.info : "domyślne info";
+    var str = params.hasOwnProperty("str") ? params.str : "domyślna wartość str";
+
+    console.log(info, str);
+}
+
+bar({ data:22, info:"txt", addr1: "Kraków" });
+
+//
+
+function test1(a, b) {
+    for (let i = 0; i < arguments.length; i++) 
+    console.log( i + ": " + arguments[i] );
+}
+
+test1(34, 56, 78, 109, 3);
+
+// 
+
+function test2(...params) {
+    for (let i = 0; i < params.length; i++) 
+    console.log( i + ": " + params[i] );
+}
+
+test2(56, 78, 109, 3, 08);
+
+//
+
+function test3(params) {
+    if(params.hasOwnProperty("data")) console.log(params.data);
+    var localStr = params.hasOwnProperty("str") ? params.str : "domyślne str";
+    var localNum = params.num || 200;
+
+    console.log(localStr, localNum);
+}
+
+test3( {data1: 10, str1: "tekst", num1: 80});
+test3( {data: 70, str: "tekst inny", num: 65});
+
+//
+
+function parseData(jsonStr, onComplete, onError) {
+    try {
+        let result = JSON.parse(jsonStr);
+        onComplete(result);
+    } catch (e) {
+        onError();
+    }
+}
+
+function done() { console.log("ok"); }
+function failed() { console.log("failed"); }
+
+parseData(' {"data": 99} ', done, failed);
+parseData(' 45667fjvbchb ', done, failed);
+
+//
+
+const exprTest = function (a, b) {
+    console.log(a,b);
+}
+
+const arrowTest = (a, b) => console.log(a, b);
+
+exprTest(5,10);
+arrowTest(4,8);
+
+//
+
+let multiply = (a,b) => { return a*b };
+
+
+
+    </script>
+</body>
+</html>
