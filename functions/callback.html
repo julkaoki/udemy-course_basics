@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // schemat callbacka - przykład
+
+        function greaterThan10(arr, callback) {
+            for (let i = 0; i < arr.length; i++) {
+                const num = arr[i];
+            
+            if (num > 10) callback(num);
+            }
+        }
+        
+        function writeToConsole(n) {
+            console.log("Number: " + n + " is greater than 10");
+        }
+
+        greaterThan10([2, 4, 15, 20, 8], writeToConsole);
+        greaterThan10([56, 4, 39, 10, 3], writeToConsole);
+        greaterThan10([678, 5, 10.5, 44], writeToConsole);
+
+        // zadanie 1 - funcja obliczająca pole prostokąta
+
+        let getRectArea = function(a, b) {
+            return a * b
+        };
+
+        console.log(getRectArea(3, 6));
+        console.log(getRectArea(7, 1));
+        console.log(getRectArea(89, 4));
+
+        // zadanie 2 - callback 
+
+        let changeArray = function (arr, callback) {
+            for(let i = 0; i < arr.length; i++) {
+                callback(arr[i]);
+            };
+        };
+
+        let multiplyBy2 = function(num) {
+            console.log(num * 2);
+        };
+
+        changeArray([2, 4, 6, 8], multiplyBy2);
+
+    </script>
+</body>
+</html>
