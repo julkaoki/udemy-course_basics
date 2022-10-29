@@ -50,6 +50,34 @@
 
         changeArray([2, 4, 6, 8], multiplyBy2);
 
+        // zadanie 3 - callback 2 (brak reakcji konsoli na całe zadanie)
+
+      function filterArray (arr, callback) {
+            for (let i = 0; i < arr.lenght; i++) {
+                let el = arr[i];
+                let flag = callback(el);
+                if (flag) console.log(el);
+            }
+      }
+
+      let nameCheck = function(name) {
+        if (name.lenght > 3) {
+            return true;
+        } else {
+            return false;
+        }
+      }
+
+      filterArray(["Ania", "Kasia", "Ola", "Daniel"], nameCheck);
+
+      filterArray([10, 20, 30, 40, 50, 60], function(num) {
+        if (num < 35) {
+            return true;
+        } else {
+            return false;
+        }
+      });
+
     </script>
 </body>
 </html>
