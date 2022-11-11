@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let employee = {
+            name: "Julia",
+            email: "julia@email.pl",
+            rank: "programmer",
+            salary: 8000
+        };
+
+        function promoteToMenager (user) {
+            if (user.rank == "menager") {
+                return console.log("Ta osoba już jest menagerem.");
+            } else {
+                user.rank = "menager";
+                user.salary = user.salary * 1.5;
+            }};
+
+        console.table(employee);
+        
+        promoteToMenager(employee);
+        console.table(employee);
+
+    </script>
+</body>
+</html>
