@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function zlomnikEpisode(title, brand, model, date, url, isViewed, satisfactionScale) {
+            this.title = title;
+            this.brand = brand;
+            this.model = model;
+            this.date = date;
+            this.url = url;
+            this.isViewed = isViewed;
+            this.satisfactionScale = satisfactionScale;
+            this.print = console.table(this);
+        }
+
+        var car1 = new zlomnikEpisode(
+            "Renault Vel Satis - nie chciałbym go gratis", 
+            "Renault",
+            "Vel Satis",
+            "06/11/2022",
+            "https://www.youtube.com/watch?v=vjDTJxcM1Dc",
+            true,
+            1
+        );
+
+        var car2 = new zlomnikEpisode(
+            "Toyota Tercel skradła me serce",
+            "Toyota",
+            "Tercel",
+            "30/10/2022",
+            "https://www.youtube.com/watch?v=b_p09TOtGss&t=197s",
+            true,
+            2
+        );
+
+        var car3 = new zlomnikEpisode(
+            "to BMW jest lepsze niż Mercedes",
+            "BMW",
+            "E3",
+            "23/10/2022",
+            "https://www.youtube.com/watch?v=VIqcYbl9Ih4",
+            false,
+            0
+        );
+
+        var car4 = new zlomnikEpisode(
+            "Pontiac Fiero to literalnie Ferrari",
+            "Pontiac",
+            "Fiero",
+            "16/10/2022",
+            "https://www.youtube.com/watch?v=sG2hoDmZ4p4",
+            true,
+            4
+        );
+
+    </script>
+</body>
+</html>
