@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function validateEmail (email) { // moja logika
+    let monkeyIndex = email.indexOf("@");
+    let dotIndex = email.indexOf(".", monkeyIndex);
+    if (monkeyIndex >= 0) {
+        if (dotIndex >= monkeyIndex) {
+            return true;
+        }
+    }
+    return false
+}
+
+function validateEmail1(email) { // wersja z kursu
+    let monkeyIndex = email.indexOf("@");
+    if (monkeyIndex < 0) return false;
+
+    let dotIndex = email.indexOf(".", monkeyIndex);
+    if (dotIndex == -1) return false;
+
+    return true;
+}
+
+let email1 = validateEmail("asia@example.com");
+console.log(email1);
+let email2 = validateEmail("karol@domena");
+console.log(email2);
+let email3 = validateEmail("user.com");
+console.log(email3);
+let email4 = validateEmail("user.domena@com");
+console.log(email4);
+let email5 = validateEmail("example.user@domena.com");
+console.log(email5);
+
+    </script>
+</body>
+</html>

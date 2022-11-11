@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let user = {
+            email: "ania@test.com",
+            membershipCost: 100,
+            numMembershipYears: 3,
+            numOfPosts: 40
+        };
+
+        function extendMembership(user) {
+            let membershipDiscountFlag = (user.numMembershipYears >= 2) ? true : false;
+            let minPostsNum = (user.numOfPosts >= 30) ? true : false;
+            if (membershipDiscountFlag && minPostsNum) {
+                user.membershipCost = user.membershipCost * 0.6;
+                console.log(user.email, "kwalifikuje się do zniżki ceny abonamentu, która wyniesie teraz", user.membershipCost, "PLN");
+            } else {
+                console.log(user.email, "posiada standarowy abonament.");
+            }
+        }
+
+        extendMembership(user);
+
+    </script>
+</body>
+</html>
